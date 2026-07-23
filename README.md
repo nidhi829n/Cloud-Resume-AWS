@@ -30,20 +30,21 @@ The entire deployment process is fully automated using GitHub Actions, allowing 
 
 ---
 
-# ✨ Features
+## ✨ Key Features
 
-- Responsive React Portfolio
-- Amazon S3 Static Website Hosting
-- Amazon CloudFront CDN
-- Serverless Visitor Counter
-- AWS Lambda Backend
-- Amazon API Gateway
-- Amazon DynamoDB Integration
-- Automated CI/CD using GitHub Actions
-- Responsive UI built with Tailwind CSS
-- Resume Download
-- Smooth Animations
-- Fast Global Content Delivery
+Here is a breakdown of what makes this cloud portfolio robust, modern, and production-ready:
+
+<div align="center">
+
+| Feature | Description | Tech / Service |
+| :--- | :--- | :--- |
+| **⚡ Modern UI/UX** | Responsive, sleek, and animated user interface built for optimal performance. | `React`, `Vite`, `Tailwind CSS` |
+| **🌍 Global Edge Delivery** | High-speed global asset distribution with secure HTTPS caching. | `Amazon S3`, `Amazon CloudFront` |
+| **📊 Live Visitor Counter** | Real-time serverless tracking engine that increments with every visit. | `API Gateway`, `AWS Lambda`, `DynamoDB` |
+| **🚀 CI/CD Automation** | Zero-downtime, fully automated deployments on every `main` branch push. | `GitHub Actions`, `AWS CLI` |
+| **📄 Interactive Portfolio** | Integrated direct resume download, smooth UI components, and project showcases. | `JavaScript`, `HTML5 / CSS3` |
+
+</div>
 
 ---
 
