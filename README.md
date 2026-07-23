@@ -10,7 +10,6 @@
 *A production-ready, serverless cloud portfolio built with React and AWS.*
 
 </div>
----
 
 <div align="center">
 
