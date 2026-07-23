@@ -1,7 +1,329 @@
-# ☁️ AWS Cloud Resume Challenge | Enterprise-Grade Serverless Portfolio & CI/CD Pipeline > **An advanced, production-ready cloud-native portfolio platform featuring modern React frontend architecture, secure serverless AWS backend microservices, and a fully automated GitHub Actions CI/CD pipeline.**
-https://img.shields.io/badge/Frontend-React%20%2F%20Vite-%2361DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"> https://img.shields.io/badge/Styling-Tailwind%20CSS-%2338B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"> https://img.shields.io/badge/AWS-Serverless-%23FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS"> https://img.shields.io/badge/Database-DynamoDB-%234053B8?style=for-the-badge&logo=amazon-dynamodb&logoColor=white" alt="DynamoDB"> https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-%232088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions">
+# ☁️ AWS Cloud Resume Challenge
 
-https://do6i18mvvfptp.cloudfront.net">🌐 Live Portfolio • https://github.com/nidhi829n/Cloud-Resume-AWS">💻 Repository • 🏗️ Architecture • 👨‍💻 Contact
+A production-ready cloud-hosted portfolio built using **React** and **AWS Serverless Services**. This project demonstrates how to deploy a modern frontend application on AWS while implementing a serverless visitor counter, global content delivery, and an automated CI/CD pipeline using GitHub Actions.
 
---- ## 💡 Executive Summary The **AWS Cloud Resume Challenge** represents the transition from conventional server-bound infrastructure to an efficient, highly-scalable, serverless cloud architecture. Designed for high performance and zero administrative overhead, this project combines a lightning-fast React application distributed through global content delivery networks with an event-driven serverless backend to track real-time analytics. Engineered with production-grade patterns, it incorporates least-privilege cloud governance, automated asset validation, and hands-free continuous deployment workflows. --- ## 📸 Visual Showcase | Home Page Hero | Live Visitor Counter | | :---: | :---: | |  |  | | Projects Showcase | Automated GitHub Actions CI/CD | | :---: | :---: | |  |  | | Amazon S3 Bucket Console | Amazon CloudFront Distribution | | :---: | :---: | |  |  | | AWS Lambda Function | API Gateway HTTP Routes | | :---: | :---: | |  |  | | DynamoDB Table Metrics | | :---: | |  | --- ## 💎 Architectural Highlights & Engineering Excellence * **Global Edge Content Delivery**: Static React assets are stored securely in an Amazon S3 bucket and distributed globally via Amazon CloudFront edge locations with ultra-low latency. * **Serverless Event-Driven Backends**: Real-time visitor increments are handled via low-latency API proxying through Amazon API Gateway triggering an isolated AWS Lambda execution layer. * **NoSQL State Persistence**: Scalable hit count tracking is managed efficiently via low-latency serverless tables in Amazon DynamoDB. * **Strict Security Governance**: Cloud permissions are tightly managed adhering strictly to the principle of least privilege utilizing customized AWS IAM policies and encrypted GitHub repository secrets. * **Zero-Downtime Automation**: Continuous deployment pipeline triggers optimized build compilations, asset uploads, and edge cache invalidations automatically on pushes to the main branch. --- ## 🛠️ Technology Stack Matrix | Architectural Tier | Selected Technology Stack | Purpose & Rationale | | :--- | :--- | :--- | | **Frontend UI/UX** | React.js, Vite, Tailwind CSS | High-performance client rendering, responsive styling, and modular components. | | **Cloud Hosting & CDN**| Amazon S3, Amazon CloudFront | Scalable static storage infrastructure and global edge cache delivery. | | **Serverless Compute** | AWS Lambda, API Gateway | Event-driven backend logic execution and secure HTTP proxy routing. | | **Data Persistence** | Amazon DynamoDB | Low-latency, schema-flexible NoSQL state tracking. | | **Security & DevOps** | AWS IAM, GitHub Actions, Git | Granular cloud access management and automated build/release workflows. | --- ## 🔄 System Architecture & Data Flow ### High-Level Deployment Topology ```text [ Client Browser ] │ HTTPS Requests ▼ [ Amazon CloudFront ] (Global CDN Edge) │ Static Asset Fetch ▼ [ Amazon S3 Bucket ] (React Distribution Assets) │ fetch(API Request) ▼ [ Amazon API Gateway ] (HTTP Proxy Endpoint) │ Event Trigger ▼ [ AWS Lambda Function ] (Stateless Compute Runtime) │ Read / Write State ▼ [ Amazon DynamoDB Table ] (Visitor Count Record) ``` ### End-to-End Request Lifecycle ```text User Visit ──► CloudFront Edge ──► S3 Bundle ──► React App Mounted │ └──◄ Visitor Count Displayed ◄── DynamoDB State ◄── Lambda Function ◄── API Gateway Route ``` --- ## ⚙️ CI/CD Automated Workflow Pipeline The continuous integration pipeline is handled natively via GitHub Actions: 1. **Trigger Event**: Developer pushes updates or merges feature code directly into the `main` branch. 2. **Environment Initialization**: GitHub hosted runners spin up an isolated Node.js execution runtime. 3. **Build Compilation**: Package dependencies are resolved and optimized production bundles are generated using Vite. 4. **Cloud Authentication**: Secure access credentials are ingested safely through encrypted GitHub Actions secrets. 5. **Asset Synchronization**: Built compilation outputs are synced directly into the designated Amazon S3 bucket. 6. **Cache Invalidation**: CloudFront edge caches are purged instantly to ensure global availability of the latest updates. --- ## 🚀 Local Development Quickstart ### Prerequisites * Node.js (v18+ recommended) * Git command line utilities ### 1. Clone the Repository ```bash git clone https://github.com/nidhi829n/Cloud-Resume-AWS.git cd Cloud-Resume-AWS ``` ### 2. Install Project Dependencies ```bash npm install ``` ### 3. Configure Local Environment Variables Create a `.env` file in the root workspace directory: ```env VITE_API_URL=YOUR_API_GATEWAY_URL ``` ### 4. Launch Local Development Server ```bash npm run dev ``` --- ## 🧩 Engineering Challenges & Solutions * **IAM Authorization Scoping**: Restrictive IAM execution policies were built explicitly for the Lambda function, granting access permissions strictly targeted to `GetItem` and `UpdateItem` operations on the visitor counter table. * **CORS Interoperability**: Resolved cross-origin policy blocks between the CloudFront distribution domain and API Gateway endpoints by explicitly mapping correct response headers. * **Edge Cache Stale Data**: Automated wildcard cache purges (`/*`) within the deployment script to clear stale edge assets instantly upon release. --- ## 🔮 Roadmap & Future Improvements - [ ] Integrate a custom domain name using **Amazon Route 53**. - [ ] Establish secure SSL/TLS security certificates via **AWS Certificate Manager (ACM)**. - [ ] Add centralized system monitoring and error logging thresholds through **Amazon CloudWatch**. - [ ] Refactor infrastructure provisioning using **Terraform** or **AWS SAM (Infrastructure as Code)**. --- ## 👨‍💻 Author & Professional Profile Built and maintained with passion by **Nidhi Mishra**. * **GitHub Profile:** @nidhi829n * **Professional Network:** LinkedIn Connection --- ## ⭐ Support & Contributions If this project added value to your understanding of cloud architecture or served as a strong technical reference, please consider leaving a **⭐ Star** on the GitHub repository! ---
-Designed & Engineered with ❤️ utilizing React, Tailwind CSS & Modern AWS Serverless Infrastructure.
+---
+
+## 🌐 Live Demo
+
+🔗 https://do6i18mvvfptp.cloudfront.net
+
+---
+
+## 📂 GitHub Repository
+
+🔗 https://github.com/nidhi829n/Cloud-Resume-AWS
+
+---
+
+# 📖 Project Overview
+
+This project is based on the **AWS Cloud Resume Challenge**, where a personal portfolio website is deployed using AWS cloud services instead of traditional hosting.
+
+The frontend is hosted in an Amazon S3 bucket and delivered globally through Amazon CloudFront. A serverless backend built using API Gateway, AWS Lambda, and DynamoDB maintains a live visitor counter that updates every time the portfolio is accessed.
+
+The entire deployment process is fully automated using GitHub Actions, allowing every push to the main branch to automatically build and deploy the latest version of the portfolio.
+
+---
+
+# ✨ Features
+
+- Responsive React Portfolio
+- Amazon S3 Static Website Hosting
+- Amazon CloudFront CDN
+- Serverless Visitor Counter
+- AWS Lambda Backend
+- Amazon API Gateway
+- Amazon DynamoDB Integration
+- Automated CI/CD using GitHub Actions
+- Responsive UI built with Tailwind CSS
+- Resume Download
+- Smooth Animations
+- Fast Global Content Delivery
+
+---
+
+# 🏗️ Architecture
+
+<p align="center">
+<img src="screenshots/aws-architecture.png" width="900">
+</p>
+
+---
+
+# 🚀 Request Flow
+
+```text
+User
+   │
+   ▼
+CloudFront
+   │
+   ▼
+Amazon S3
+   │
+   ▼
+React Portfolio
+   │
+fetch(API)
+   │
+   ▼
+API Gateway
+   │
+   ▼
+AWS Lambda
+   │
+   ▼
+Amazon DynamoDB
+   │
+   ▼
+Updated Visitor Count
+```
+
+---
+
+# ⚙️ CI/CD Pipeline
+
+Every push to the **main** branch automatically triggers the deployment pipeline.
+
+```text
+Developer
+
+↓
+
+Git Push
+
+↓
+
+GitHub Repository
+
+↓
+
+GitHub Actions
+
+↓
+
+Install Dependencies
+
+↓
+
+Build React App
+
+↓
+
+Upload dist → Amazon S3
+
+↓
+
+CloudFront Cache Invalidation
+
+↓
+
+Live Website Updated
+```
+
+---
+
+# ☁️ AWS Services Used
+
+| Service | Purpose |
+|----------|---------|
+| Amazon S3 | Static website hosting |
+| Amazon CloudFront | Global CDN and caching |
+| AWS Lambda | Serverless backend |
+| Amazon API Gateway | HTTP API endpoint |
+| Amazon DynamoDB | Visitor counter storage |
+| AWS IAM | Secure permissions management |
+| GitHub Actions | Automated CI/CD |
+
+---
+
+# 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- Vite
+- Tailwind CSS
+- JavaScript
+
+### Cloud
+
+- Amazon S3
+- Amazon CloudFront
+- AWS Lambda
+- Amazon API Gateway
+- Amazon DynamoDB
+- AWS IAM
+
+### DevOps
+
+- Git
+- GitHub
+- GitHub Actions
+
+---
+
+# 📸 Project Screenshots
+
+## 🏠 Home Page
+
+![Home](screenshots/home.png)
+
+---
+
+## 👁️ Visitor Counter
+
+![Visitor Counter](screenshots/visitor-counter.png)
+
+---
+
+## 💻 Projects Section
+
+![Projects](screenshots/projects.png)
+
+---
+
+## 🚀 GitHub Actions
+
+![GitHub Actions](screenshots/github-actions.png)
+
+---
+
+## ☁️ Amazon S3
+
+![S3](screenshots/s3.png)
+
+---
+
+## 🌍 Amazon CloudFront
+
+![CloudFront](screenshots/cloudfront.png)
+
+---
+
+## ⚡ AWS Lambda
+
+![Lambda](screenshots/lambda.png)
+
+---
+
+## 🔗 API Gateway
+
+![API Gateway](screenshots/api-gateway.png)
+
+---
+
+## 🗄️ DynamoDB
+
+![DynamoDB](screenshots/dynamodb.png)
+
+---
+
+# 📂 Project Structure
+
+```text
+Cloud-Resume-AWS/
+
+│── .github/
+│     └── workflows/
+│            deploy.yml
+
+│── public/
+
+│── src/
+
+│── screenshots/
+
+│── package.json
+
+│── vite.config.js
+
+│── README.md
+```
+
+---
+
+# 💻 Local Setup
+
+Clone the repository
+
+```bash
+git clone https://github.com/nidhi829n/Cloud-Resume-AWS.git
+```
+
+Go to the project
+
+```bash
+cd Cloud-Resume-AWS
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Create a `.env` file
+
+```env
+VITE_API_URL=YOUR_API_GATEWAY_URL
+```
+
+Run the project
+
+```bash
+npm run dev
+```
+
+---
+
+# 🚀 Deployment
+
+Deployment is completely automated through GitHub Actions.
+
+Whenever code is pushed to the **main** branch:
+
+- Install dependencies
+- Build React application
+- Upload latest build to Amazon S3
+- Invalidate CloudFront cache
+- Deploy latest version automatically
+
+---
+
+# 🧩 Challenges Faced
+
+During development, several real-world deployment challenges were encountered and resolved:
+
+- Configured IAM permissions for Lambda to access DynamoDB.
+- Fixed CORS issues between the React frontend and API Gateway.
+- Debugged CloudFront cache invalidation after new deployments.
+- Configured environment variables correctly for Vite using `import.meta.env`.
+- Implemented GitHub Actions secrets for secure AWS authentication.
+- Resolved CloudFront distribution ID configuration issues during CI/CD setup.
+
+These challenges helped strengthen understanding of AWS services, serverless architecture, debugging, and deployment workflows.
+
+---
+
+# 🔮 Future Improvements
+
+- Custom Domain using Route 53
+- HTTPS with AWS Certificate Manager
+- CloudWatch Monitoring
+- Infrastructure as Code (Terraform/AWS SAM)
+- Analytics Dashboard
+
+---
+
+# 👩‍💻 Author
+
+**Nidhi Mishra**
+
+GitHub: https://github.com/nidhi829n
+
+---
+
+# ⭐ If you found this project helpful, consider giving it a star!
+----bro plz modify this readme as well
